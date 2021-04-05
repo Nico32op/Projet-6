@@ -14,7 +14,7 @@ exports.creationobjet = (req, res, next) => {
       //on récupère le http (req.protocol), la locallisation du server (localhost:3000) et ou se trouve le dossier on enregistre (images), cela créé l'url ou sera visible l'image
       req.file.filename // filename récupère le nom du fichier et sera la dernière partie de l'url
     }`,
-    likes: 0, //
+    likes: 0,
     dislikes: 0,
     usersLiked: [],
     usersDisliked: [],
