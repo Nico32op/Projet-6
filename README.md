@@ -13,5 +13,9 @@
 
     Créer un dossier "backend" qui contiendra le contenu de mon code, ensuite ouvrez le terminal depuis ce dossier. 
     Installer la dernère version de Node : nvm install 14.15.4, choisir d'utiliser cette version : nvm use 14.15.4
+    Pour vous connectez à votre Base de donnée MongoDB, remplacer le fichier .env.example par un fichier .env, puis : 
+    - remplacer la valeur de la variable DB_ADMIN_USERNAME par votre User mongodb
+    - remplacer la valeur de la variable DB_ADMIN_PASSWORD par votre mot de passe mongodb
     Pour utiliser le serveur installer le package nodemon : npm install -g nodemon
     Puis lancez le serveur: nodemon server
+    Le serveur back-end est utilisé sur le port 3000
