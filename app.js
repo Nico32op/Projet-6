@@ -23,7 +23,11 @@ mongoose //on connecte mongoose à la base de données grace au lien fournis par
       process.env.DB_ADMIN_USERNAME +
       ":" +
       process.env.DB_ADMIN_PASSWORD +
-      "@cluster0.36afc.mongodb.net/test?retryWrites=true&w=majority",
+      "@" +
+      process.env.DB_ADMIN_CLUSTER +
+      "/" +
+      process.env.DB_ADMIN_NAMEDATABASE +
+      "?retryWrites=true&w=majority",
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then(() => console.log("Connexion à MongoDB réussie !"))
