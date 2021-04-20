@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken"); // on importe le packgae qui créé et vér
 module.exports = (req, res, next) => {
   try {
     const token = req.headers.authorization.split(" ")[1]; // on récupère la valeur token reçu dans la requête
-    const decodedToken = jwt.verify(token, "RANDOM_TOKEN_SECRET"); // on compare le token ainsi que le "mot de passe" token reçu est le même que celui déclaré dans la partie login
+    const decodedToken = jwt.verify(token, process.env.SECRET_TOKEN); // on compare le token ainsi que le "mot de passe" token reçu est le même que celui déclaré dans la partie login
     const userId = decodedToken.userId; // on récupère l'id utilisateur de notre token
     if (req.body.userId && req.body.userId !== userId) {
       // on compare si l'id reçu dans le corps de la requête est le même que celui présent dans le token
